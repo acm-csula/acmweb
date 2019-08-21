@@ -1,11 +1,11 @@
 @font-face {
     font-family: SF Pro Display;
-    src: url('assets/SF-Pro-Display-Regular.otf')
+    src: url('../SF-Pro-Display-Regular.otf')
 }
 
 @font-face{
     font-family: SF-Bold Display;
-    src: url('assets/SF-Pro-Display-Bold.otf')
+    src: url('../SF-Pro-Display-Bold.otf')
 }
 
 body{
