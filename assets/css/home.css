@@ -303,6 +303,9 @@ footer{
     .helloWorld-img{
         width: 100%;
     }
+    .member-title{
+        font-size: 3.5rem;
+    }
     .socialMedia{
         margin-bottom: 2rem;
     }
