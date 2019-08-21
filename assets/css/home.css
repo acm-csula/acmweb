@@ -36,15 +36,15 @@ header{
 }
 
 .carousel-1{
-    background-image: url('assets/images/guestGoogleSpeaker.png')
+    background-image: url('../images/guestGoogleSpeaker.png')
 }
 
 .carousel-2{
-    background-image: url('assets/images/eaglePost.jpg')
+    background-image: url('../assets/images/eaglePost.jpg')
 }
 
 .carousel-3{
-    background-image: url('assets/images/jplTour.jpg')
+    background-image: url('../assets/images/jplTour.jpg')
 }
 
 .carousel-item{
