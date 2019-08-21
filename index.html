@@ -9,6 +9,9 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+        <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+        <script src="/assets/js/paypal.js"> </script>
         <script src="https://kit.fontawesome.com/0a4a567995.js"></script>
         <title>ACM CSULA</title>
         <link rel="stylesheet" href="/assets/css/home.css">
@@ -20,10 +23,10 @@
                     <a class="navbar-brand">
                         <img id="logo" src="/assets/images/memes.png">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button style="display: none;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
-                    <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+                    <div style="display: none !important;" class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item"> <a class="nav-link" href="#"> Events </a></li>
                             <li class="nav-item"> <a class="nav-link" href="#"> Membership </a></li>
@@ -43,7 +46,7 @@
                             <br>
                             <a>  We like to give a huge thanks to to our members for dictating their time to our organization, we couldn't do it with you all! </a>
                             <div class="btn-container">
-                                <a class="learnMore-btn" href="#"> Learn More </a>
+                                <a class="learnMore-btn" style="display: none;" href="#"> Learn More </a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +56,7 @@
                             <br>
                             <a> In the tech industry is everything is pretty much a webapp now. Understanding how to use a web framework is becoming more an essential than ever.</a>
                             <div class="btn-container">
-                                <a class="learnMore-btn" href="#"> Learn More </a>
+                                <a class="learnMore-btn" style="display: none;" href="#"> Learn More </a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +66,7 @@
                             <br>
                             <a> Python is currently the most trending language, learn how to create a game using python. </a>
                             <div class="btn-container">
-                                    <a class="learnMore-btn" href="#"> Learn More </a>
+                                    <a class="learnMore-btn" style="display: none;" href="#"> Learn More </a>
                                 </div>
                         </div>
                     </div>
@@ -127,29 +130,94 @@
                         </div>
                     </div>
                 </div>
+                <div class="membership">
+                    <h1 class="introduction-title"> Membership </h1>
+                    <div class="benefits-container">
+                        <div class=" benefits-info">
+                            It's no secret that classes aren't enough to give your practical experience once you hit the work-force. California State Los Angeles's very own chapter of the Association for Computing Machinery takes care of its members in more ways then one. We do our best to keep you updated on special events as well as ongoing club activities. Here are a few key benefits that you could take advantage of by becoming a member of ACM today.
+                        </div>
+                        <div class="row d-flex justify-content-center benefits-listing">
+                            <div class="benefits-listing-content col-md-2 text-center"> 
+                                <i class="fas fa-project-diagram"></i> <br>
+                                Develop skills with project experience through intensive workshops.
+                            </div>
+                            <div class="benefits-listing-content col-md-2 text-center">
+                                <i  class="fas fa-wave-square"></i>
+                                Inform about internship & scholarship opportunities 
+                            </div>
+                            <div class="benefits-listing-content col-md-2 text-center"> <i class="fas fa-unlock"></i> Resume/Internship Workshops. </div>
+                            <div class="benefits-listing-content col-md-2 text-center"> 
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                Tutoring for computer science or related courses. 
+                            </div>
+                            <div class="benefits-listing-content col-md-2 text-center"><i class="fas fa-building"></i> Provide conference opportunities/Tech companies' tours </div>
+                        </div>
+                    </div>
+                    <div class="joining-container">
+                        <h3 class="subtitle"> How do join? </h3>
+                        <div class="row joining-content">
+                            <div class="col-md-6 joining-info">
+                                The club holds many events throughout the semester. However, one of most important experiences is being involved with the workshops. To get the most benefits off being a member of the club - make sure to meet deadlines. Be aware that workshop space is very limited, so don't miss the first meeting of each semester (check the calendar for more details).
+                                <div class="btn-container">
+                                    <div id="paypal-btn"></div>
+                                </div>
+                                <div class="note-paid mt-3">
+                                        <h3 class="subtitle"> What's next? </h3>
+                                        After you paid, please fill out this form in order to confirm your membership.
+                                        <div class="btn-container">
+                                                <a class="learnMore-btn" href="https://docs.google.com/forms/d/1mVgIwUTGt0YKCCtGA6BvOiQzMyMgR-dkt8ZvNL4CY14/"> Confirmation Form</a> 
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 membershipType">
+                                <ul class="membership-container">
+                                    <li>
+                                        <h3 class="subtitle "> $5 Membership </h3>
+                                        <ul>
+                                            <li> Opportunity to join our semester projects. </li>
+                                            <li> Complementary pizza to every meeting/event. </li>
+                                            <li> Weekly Newsletters. </li>
+                                            <li> Being informed on internship and scholarship opportunities.</li>
+                                            <li> Tutoring for computer science or related courses. </li>
+                                            <li> Access to our workshops; including Git, Resume, Coding Interview and etc. </li>
+                                        </ul>
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <h3 class="subtitle "> $12 Membership+ </h3>
+                                        <ul>
+                                            <li> Includes everything in the basic membership. </li>
+                                            <li> Includes an "It's not a bug, it's a feature" T-shirt. </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
     <footer>
         <div class="footer">
-                <ul class="navbar-footer">
+                <ul class="navbar-footer" style="display: none;">
                     <li> <a href="#"> Events </a></li>
                     <li> <a href="#"> Membership </a></li>
                     <li> <a href="#"> Projects </a></li>
                 </ul>
                 <div class="media-legal d-flex justify-content-between">
                     <div class="socialMedia d-flex">
-                        <a class="media facebook"> 
+                        <a class="media facebook" href="https://www.facebook.com/calstatela.acm"> 
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="media mail">
+                        <a class="media mail" href="mailto:acm.calstatela@gmail.com">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a class="media instagram">
-                            <i class="fab fa-instagram"></i>
+                        <a class="media instagram" href="https://www.instagram.com/calstatela_acm/?hl=en">
+                            <i class="fab fa-instagram" ></i>
                         </a>
-                        <a class="media discord">
-                            <i class="fab fa-discord"></i>
+                        <a class="media discord" href="https://discordapp.com/invite/wX58JRv">
+                            <i class="fab fa-discord" ></i>
                         </a>
                     </div>
                     <div class="legal">
