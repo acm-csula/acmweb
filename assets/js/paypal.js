@@ -47,8 +47,8 @@ paypal.Button.render({
 
 
                 redirect_urls: {
-                    return_url: 'http://127.0.0.1:5500/',
-                    cancel_url: 'http://127.0.0.1:5500/'
+                    return_url: 'http://acm.calstatela.edu/',
+                    cancel_url: 'http://acm.calstatela.edu/'
                 }
             }
         });
@@ -62,7 +62,7 @@ paypal.Button.render({
     },
 
     onCancel: function (data, actions) {
-        window.location.replace("http://127.0.0.1:5500/");
+        window.location.replace("http://acm.calstatela.edu/");
         return actions.redirect();
     },
 
